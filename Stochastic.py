@@ -52,10 +52,10 @@ def BaselineRun(model,iteration):
 	baselineresults[iteration,2] = Recur
 	baselineresults[iteration,3] = 0
 
-for k in range(n_runs):
-	print "Baseline Iteration %i of %i" % (k+1,n_runs)
-	BaselineRun(CDI,k)
-	
+for i in range(n_runs):
+	print "Baseline Iteration %i of %i" % (i+1,n_runs)
+	BaselineRun(CDI,i)
+i = 0	
 np.savetxt('baseline.csv',baselineresults,delimiter=',',header=header,comments='')
 del baselineresults
 
@@ -77,34 +77,34 @@ def CDIRun(model,percent,iteration):
 	cdiresults[iteration,2] = Recur
 	cdiresults[iteration,3] = percent*100
 	
-for j in range(n_runs):
-	print "CDI Only (0.20) Iteration %i of %i" % (j+1,n_runs)
-	CDIRun(CDI,0.20,j)
-
+for i in range(n_runs):
+	print "CDI Only (0.20) Iteration %i of %i" % (i+1,n_runs)
+	CDIRun(CDI,0.20,i)
+i = 0
 np.savetxt('cdionlyresults20.csv',cdiresults,delimiter=',',header=header,comments='')
 
-for j in range(n_runs):
-	print "CDI Only (0.40) Iteration %i of %i" % (j+1,n_runs)
-	CDIRun(CDI,0.40,j)
-
+for i in range(n_runs):
+	print "CDI Only (0.40) Iteration %i of %i" % (i+1,n_runs)
+	CDIRun(CDI,0.40,i)
+i = 0
 np.savetxt('cdionlyresults40.csv',cdiresults,delimiter=',',header=header,comments='')
 
-for j in range(n_runs):
-	print "CDI Only (0.60) Iteration %i of %i" % (j+1,n_runs)
-	CDIRun(CDI,0.60,j)
-
+for i in range(n_runs):
+	print "CDI Only (0.60) Iteration %i of %i" % (i+1,n_runs)
+	CDIRun(CDI,0.60,i)
+i = 0
 np.savetxt('cdionlyresults60.csv',cdiresults,delimiter=',',header=header,comments='')
 
-for j in range(n_runs):
-	print "CDI Only (0.80) Iteration %i of %i" % (j+1,n_runs)
-	CDIRun(CDI,0.80,j)
-
+for i in range(n_runs):
+	print "CDI Only (0.80) Iteration %i of %i" % (i+1,n_runs)
+	CDIRun(CDI,0.80,i)
+i = 0
 np.savetxt('cdionlyresults80.csv',cdiresults,delimiter=',',header=header,comments='')
 
-for j in range(n_runs):
-	print "CDI Only (1.00) Iteration %i of %i" % (j+1,n_runs)
-	CDIRun(CDI,1.00,j)
-
+for i in range(n_runs):
+	print "CDI Only (1.00) Iteration %i of %i" % (i+1,n_runs)
+	CDIRun(CDI,1.00,i)
+i = 0
 np.savetxt('cdionlyresults100.csv',cdiresults,delimiter=',',header=header,comments='')
 del cdiresults
 
@@ -127,34 +127,34 @@ def ABXRun(model,percent,iteration):
 	abxresults[iteration,2] = Recur
 	abxresults[iteration,3] = percent*100
 	
-for l in range(n_runs):
-	print "ABX Only (0.20) Iteration %i of %i" % (l+1,n_runs)
-	ABXRun(CDI,0.20,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.20) Iteration %i of %i" % (i+1,n_runs)
+	ABXRun(CDI,0.20,i)
+i = 0
 np.savetxt('abxonlyresults20.csv',abxresults,delimiter=',',header=header,comments='')
 
-for l in range(n_runs):
-	print "ABX Only (0.40) Iteration %i of %i" % (l+1,n_runs)
-	ABXRun(CDI,0.40,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.40) Iteration %i of %i" % (i+1,n_runs)
+	ABXRun(CDI,0.40,i)
+i = 0
 np.savetxt('abxonlyresults40.csv',abxresults,delimiter=',',header=header,comments='')
 
-for l in range(n_runs):
-	print "ABX Only (0.60) Iteration %i of %i" % (l+1,n_runs)
-	ABXRun(CDI,0.60,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.60) Iteration %i of %i" % (i+1,n_runs)
+	ABXRun(CDI,0.60,i)
+i = 0
 np.savetxt('abxonlyresults60.csv',abxresults,delimiter=',',header=header,comments='')
 
-for l in range(n_runs):
-	print "ABX Only (0.80) Iteration %i of %i" % (l+1,n_runs)
-	ABXRun(CDI,0.80,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.80) Iteration %i of %i" % (i+1,n_runs)
+	ABXRun(CDI,0.80,i)
+i = 0
 np.savetxt('abxonlyresults80.csv',abxresults,delimiter=',',header=header,comments='')
 
-for l in range(n_runs):
-	print "ABX Only (1.00) Iteration %i of %i" % (l+1,n_runs)
-	ABXRun(CDI,1.00,j)
-
+for i in range(n_runs):
+	print "ABX Only (1.00) Iteration %i of %i" % (i+1,n_runs)
+	ABXRun(CDI,1.00,i)
+i = 0
 np.savetxt('abxonlyresults100.csv',abxresults,delimiter=',',header=header,comments='')
 del abxresults
 
@@ -177,34 +177,34 @@ def ABXPPIRun(model,percent,iteration):
 	abxppiresults[iteration,2] = Recur
 	abxppiresults[iteration,3] = percent*100
 	
-for m in range(n_runs):
-	print "ABX Only (0.20) Iteration %i of %i" % (l+1,n_runs)
-	ABXPPIRun(CDI,0.20,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.20) Iteration %i of %i" % (i+1,n_runs)
+	ABXPPIRun(CDI,0.20,i)
+i = 0
 np.savetxt('abxppiresults20.csv',abxppiresults,delimiter=',',header=header,comments='')
 
-for m in range(n_runs):
-	print "ABX Only (0.40) Iteration %i of %i" % (l+1,n_runs)
-	ABXPPIRun(CDI,0.40,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.40) Iteration %i of %i" % (i+1,n_runs)
+	ABXPPIRun(CDI,0.40,i)
+i = 0
 np.savetxt('abxppiresults40.csv',abxppiresults,delimiter=',',header=header,comments='')
 
-for m in range(n_runs):
-	print "ABX Only (0.60) Iteration %i of %i" % (l+1,n_runs)
-	ABXPPIRun(CDI,0.60,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.60) Iteration %i of %i" % (i+1,n_runs)
+	ABXPPIRun(CDI,0.60,i)
+i = 0
 np.savetxt('abxppiresults60.csv',abxppiresults,delimiter=',',header=header,comments='')
 
-for m in range(n_runs):
-	print "ABX Only (0.80) Iteration %i of %i" % (l+1,n_runs)
-	ABXPPIRun(CDI,0.80,j)
-
+for i in range(n_runs):
+	print "ABX Only (0.80) Iteration %i of %i" % (i+1,n_runs)
+	ABXPPIRun(CDI,0.80,i)
+i = 0
 np.savetxt('abxppiresults80.csv',abxppiresults,delimiter=',',header=header,comments='')
 
-for m in range(n_runs):
-	print "ABX Only (1.00) Iteration %i of %i" % (l+1,n_runs)
-	ABXPPIRun(CDI,1.00,j)
-
+for i in range(n_runs):
+	print "ABX Only (1.00) Iteration %i of %i" % (i+1,n_runs)
+	ABXPPIRun(CDI,1.00,i)
+i = 0
 np.savetxt('abxppiresults100.csv',abxppiresults,delimiter=',',header=header,comments='')
 del abxppiresults
 
@@ -228,34 +228,34 @@ def CombinedRun(model,percent,iteration):
 	combinedresults[iteration,2] = Recur
 	combinedresults[iteration,3] = percent*100
 	
-for n in range(n_runs):
-	print "Combined (0.20) Iteration %i of %i" % (l+1,n_runs)
-	CombinedRun(CDI,0.20,j)
-
+for i in range(n_runs):
+	print "Combined (0.20) Iteration %i of %i" % (i+1,n_runs)
+	CombinedRun(CDI,0.20,i)
+i = 0
 np.savetxt('combinedresults20.csv',combinedresults,delimiter=',',header=header,comments='')
 
-for n in range(n_runs):
-	print "Combined (0.40) Iteration %i of %i" % (l+1,n_runs)
-	CombinedRun(CDI,0.40,j)
-
+for i in range(n_runs):
+	print "Combined (0.40) Iteration %i of %i" % (i+1,n_runs)
+	CombinedRun(CDI,0.40,i)
+i = 0
 np.savetxt('combinedresults40.csv',combinedresults,delimiter=',',header=header,comments='')
 
-for n in range(n_runs):
-	print "Combined (0.60) Iteration %i of %i" % (l+1,n_runs)
-	CombinedRun(CDI,0.60,j)
-
+for i in range(n_runs):
+	print "Combined (0.60) Iteration %i of %i" % (i+1,n_runs)
+	CombinedRun(CDI,0.60,i)
+i = 0
 np.savetxt('combinedresults60.csv',combinedresults,delimiter=',',header=header,comments='')
 
-for n in range(n_runs):
-	print "Combined (0.80) Iteration %i of %i" % (l+1,n_runs)
-	CombinedRun(CDI,0.80,j)
-
+for i in range(n_runs):
+	print "Combined (0.80) Iteration %i of %i" % (i+1,n_runs)
+	CombinedRun(CDI,0.80,i)
+i = 0
 np.savetxt('combinedresults80.csv',combinedresults,delimiter=',',header=header,comments='')
 
-for n in range(n_runs):
-	print "Combined (1.00) Iteration %i of %i" % (l+1,n_runs)
-	CombinedRun(CDI,1.00,j)
-
+for i in range(n_runs):
+	print "Combined (1.00) Iteration %i of %i" % (i+1,n_runs)
+	CombinedRun(CDI,1.00,i)
+i = 0
 np.savetxt('combinedresults100.csv',combinedresults,delimiter=',',header=header,comments='')
 
 
