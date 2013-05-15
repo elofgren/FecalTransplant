@@ -23,9 +23,6 @@ f = open(PMLout,'w')
 f.write(pml.content)
 f.close()
 
-CDI = stochpy.SSA()
-CDI.Model(File='cdiff_FT.psc', dir=os.getcwd())
-
 # Set up simulation parameters
 start_time = 0.0
 end_time = 8760
@@ -37,6 +34,8 @@ header = "Treated, Incident, Recur, Level"
 #######################################
 # Baseline Scenario - No Intervention #
 #######################################
+CDI = stochpy.SSA()
+CDI.Model(File='cdiff_FT.psc', dir=os.getcwd())
 
 baselineresults = np.zeros([n_runs, 4])
 
@@ -62,6 +61,9 @@ del baselineresults
 ########################################
 # FMT Intervention - CDI Patients Only #
 ########################################
+CDI = stochpy.SSA()
+CDI.Model(File='cdiff_FT.psc', dir=os.getcwd())
+
 cdiresults = np.zeros([n_runs, 4])
 
 def CDIRun(model,percent,iteration):
@@ -111,6 +113,9 @@ del cdiresults
 ########################################
 # FMT Intervention - ABX Patients Only #
 ########################################
+CDI = stochpy.SSA()
+CDI.Model(File='cdiff_FT.psc', dir=os.getcwd())
+
 abxresults = np.zeros([n_runs, 4])
 
 def ABXRun(model,percent,iteration):
@@ -161,6 +166,9 @@ del abxresults
 #########################################
 # FMT Intervention - ABX & PPI Patients #
 #########################################
+CDI = stochpy.SSA()
+CDI.Model(File='cdiff_FT.psc', dir=os.getcwd())
+
 abxppiresults = np.zeros([n_runs, 4])
 
 def ABXPPIRun(model,percent,iteration):
@@ -211,6 +219,9 @@ del abxppiresults
 ###############################
 # FMT Intervention - Combined #
 ###############################
+CDI = stochpy.SSA()
+CDI.Model(File='cdiff_FT.psc', dir=os.getcwd())
+
 combinedresults = np.zeros([n_runs, 4])
 
 def CombinedRun(model,percent,iteration):
