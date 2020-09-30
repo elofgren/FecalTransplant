@@ -12,16 +12,6 @@ import os
 import stochpy
 import pylab as pl
 import numpy as np
-import requests
-
-# Import most recent PML file from Github
-pml = requests.get(
-'https://raw.github.com/elofgren/PML/master/cdiff_FT.psc?login=elofgren&token=bf6f8b071be7c69c9b6f7afd8df216a9'
-,verify=False)
-PMLout = os.path.join(os.getcwd(),'cdiff_FT.psc')
-f = open(PMLout,'w')
-f.write(pml.content)
-f.close()
 
 # Set up simulation parameters
 start_time = 0.0
